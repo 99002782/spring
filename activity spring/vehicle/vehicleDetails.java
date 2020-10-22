@@ -8,16 +8,15 @@ public class VechileDetails {
 
 	@Autowired
 	@Qualifier("car")
-	Mile car;
+	MileCalc car;
 	@Autowired
 	@Qualifier("bike")
-	Mile bike;
+	MileCalc bike;
 	public void getMileage(String choice) {
 		if(choice.equals("car"))
-			car.showMileage();
+			car.showMileage(20);
 		else
-			bike.showMileage();
+			bike.showMileage(40);
 	}
 	
 	}
-
