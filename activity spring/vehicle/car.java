@@ -3,12 +3,12 @@ package com.lts.vechile;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Car implements Mile{
+public class Car implements MileCalc{
 
 	@Override
-	public void showMileage() {
+	public void showMileage(int x) {
 		// TODO Auto-generated method stub
-		System.out.println("car mileage is");
+		System.out.println("car mileage"+x);
 	}
 
 }
