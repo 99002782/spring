@@ -9,11 +9,10 @@ import org.springframework.context.ApplicationContext;
 import com.lts.vechile.VechileDetails;
 
 @SpringBootApplication
-public class TrailApplication implements CommandLineRunner{
+public class TrailOne2Application implements CommandLineRunner {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TrailApplication.class, args);
-		
+		SpringApplication.run(TrailOne2Application.class, args);
 	}
 	@Autowired
 	ApplicationContext context;
