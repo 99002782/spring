@@ -15,54 +15,40 @@ public class CollegeServiceImpl implements CollegeService {
     CollegeRepository collegeRepository;
 
 	@Override
-	public College getCollegeByCode(Integer collegecode) throws CollegeNotFoundException{
+	public College getCollegeByCode(Integer collegecode) throws CollegeNotFoundException {
+		// TODO Auto-generated method stub
 		return collegeRepository.findById(collegecode)
-				.orElseThrow(()->new CollegeNotFoundException("College with specified id not found"));
+			.orElseThrow(()->new CollegeNotFoundException("College with specified id not found"));
 	}
-	
+
 	@Override
 	public College addCollege(College college) {
 		// TODO Auto-generated method stub
 		College newCollege=collegeRepository.save(college);
-	return newCollege;
-}
+		return newCollege;
+	}
 
 	@Override
-	public Boolean deleteCollege(Integer collegecode) throws CollegeNotFoundException {
+	public Boolean deleteCollegeByCode(Integer collegecode) throws CollegeNotFoundException {
 		// TODO Auto-generated method stub
-		 collegeRepository.deleteById(collegecode);
-		 return true;
- 	}
+		collegeRepository.deleteById(collegecode);
+		return true;
+	}
 
 	@Override
 	public List<College> getAllColleges() {
-		// TODO Auto-generated method stub
-		return collegeRepository.findAll();
+        return collegeRepository.findAll();
 	}
 
 	@Override
-	public List<College> getCollegeByName(String CollegeName) throws CollegeNotFoundException {
+	public List<College> getCollegeBystate(String collegeState) throws CollegeNotFoundException {
 		// TODO Auto-generated method stub
-		return collegeRepository.findCollegeByName(CollegeName);
+		return collegeRepository.findCollegeBystate(collegeState);
 	}
 
 	@Override
-	public List<College> getCollegeByState(String CollegeState) throws CollegeNotFoundException {
+	public List<College> getCollegeBycity(String collegecity) throws CollegeNotFoundException {
 		// TODO Auto-generated method stub
-		return collegeRepository.findCollegeByState(CollegeState);
+		return collegeRepository.findCollegeBycity(collegecity);
 	}
-
-	@Override
-	public College getToatalStu(Integer collegecode) {
-	// TODO Auto-generated method stub
-	return collegeRepository.findAllStudents(collegecode);
-}
-
-	
-	
-
-	
-	
-	
-
 }
