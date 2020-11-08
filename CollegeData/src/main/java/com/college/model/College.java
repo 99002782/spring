@@ -7,17 +7,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @TypeAlias("College")
 public class College {
 	@Id
-	String collegeName;
+	String name;
     Integer totalstu;
-    Integer collegeCode;
+    Integer code;
     Address address;
-    
-	public College(String collegeName, Integer totalstu, Integer collegeCode, Address address) {
-		super();
-		this.collegeName = collegeName;
-		this.totalstu = totalstu;
-		this.collegeCode = collegeCode;
-		this.address = address;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public Integer getTotalstu() {
 		return totalstu;
@@ -25,23 +23,35 @@ public class College {
 	public void setTotalstu(Integer totalstu) {
 		this.totalstu = totalstu;
 	}
-	public String getCollegeName() {
-		return collegeName;
+	public Integer getCode() {
+		return code;
 	}
-	public void setCollegeName(String collegeName) {
-		this.collegeName = collegeName;
+	public void setCode(Integer code) {
+		this.code = code;
 	}
-	public Integer getCollegeCode() {
-		return collegeCode;
+	public Address getAddress() {
+		return address;
 	}
-	public void setCollegeCode(Integer collegeCode) {
-		this.collegeCode = collegeCode;
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	public College(String name, Integer totalstu, Integer code, Address address) {
+		super();
+		this.name = name;
+		this.totalstu = totalstu;
+		this.code = code;
+		this.address = address;
 	}
 	@Override
 	public String toString() {
-		return "College [collegeName=" + collegeName + ", totalstu=" + totalstu + ", collegeCode=" + collegeCode
-				+ ", address=" + address + "]";
+		return "College [name=" + name + ", totalstu=" + totalstu + ", code=" + code + ", address=" + address + "]";
 	}
+	public College() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+    
+	
 	
 	
 }

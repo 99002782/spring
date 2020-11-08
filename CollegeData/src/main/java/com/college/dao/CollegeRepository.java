@@ -10,9 +10,9 @@ import com.college.model.College;
 
 @Repository
 public interface CollegeRepository extends MongoRepository<College,Integer>{
-//College findCollegeByCode(Integer collegeCode);
-List<College> findCollegeBystate(String collegeState);
-List<College> findCollegeBycity(String collegecity);
+College findCollegeBycode(Integer code);
+College findCollegeByname(String name);
+//List<College> findCollegeBycity(String city);
 //College findAllStudents(Integer collegecode);
 
 //@Query("{'totalstu':{$gt:?1000}}")

@@ -15,9 +15,9 @@ public class CollegeServiceImpl implements CollegeService {
     CollegeRepository collegeRepository;
 
 	@Override
-	public College getCollegeByCode(Integer collegecode) throws CollegeNotFoundException {
+	public College getCollegeByCode(Integer code) throws CollegeNotFoundException {
 		// TODO Auto-generated method stub
-		return collegeRepository.findById(collegecode)
+		return collegeRepository.findById(code)
 			.orElseThrow(()->new CollegeNotFoundException("College with specified id not found"));
 	}
 
@@ -29,9 +29,9 @@ public class CollegeServiceImpl implements CollegeService {
 	}
 
 	@Override
-	public Boolean deleteCollegeByCode(Integer collegecode) throws CollegeNotFoundException {
+	public Boolean deleteCollegeByCode(Integer code) throws CollegeNotFoundException {
 		// TODO Auto-generated method stub
-		collegeRepository.deleteById(collegecode);
+		collegeRepository.deleteById(code);
 		return true;
 	}
 
@@ -40,15 +40,15 @@ public class CollegeServiceImpl implements CollegeService {
         return collegeRepository.findAll();
 	}
 
-	@Override
-	public List<College> getCollegeBystate(String collegeState) throws CollegeNotFoundException {
-		// TODO Auto-generated method stub
-		return collegeRepository.findCollegeBystate(collegeState);
-	}
+//	@Override
+//	public List<College> getCollegeBystate(String collegeState) throws CollegeNotFoundException {
+//		// TODO Auto-generated method stub
+//		return collegeRepository.findCollegeBystate(collegeState);
+//	}
 
-	@Override
-	public List<College> getCollegeBycity(String collegecity) throws CollegeNotFoundException {
-		// TODO Auto-generated method stub
-		return collegeRepository.findCollegeBycity(collegecity);
-	}
+//	@Override
+//	public List<College> getCollegeBycity(String city) throws CollegeNotFoundException {
+//		// TODO Auto-generated method stub
+//		return collegeRepository.findCollegeBycity(city);
+//	}
 }

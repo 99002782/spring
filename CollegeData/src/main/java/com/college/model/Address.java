@@ -1,33 +1,29 @@
 package com.college.model;
 
 public class Address {
-String collegecity;
-String collegestate;
-
-public Address(String collegecity, String collegestate) {
+String city;
+String state;
+public String getCity() {
+	return city;
+}
+public void setCity(String city) {
+	this.city = city;
+}
+public String getState() {
+	return state;
+}
+public void setState(String state) {
+	this.state = state;
+}
+public Address(String city, String state) {
 	super();
-	this.collegecity = collegecity;
-	this.collegestate = collegestate;
-}
-public String getCollegecity() {
-	return collegecity;
-}
-public void setCollegecity(String collegecity) {
-	this.collegecity = collegecity;
-}
-public String getCollegestate() {
-	return collegestate;
-}
-public void setCollegestate(String collegestate) {
-	this.collegestate = collegestate;
+	this.city = city;
+	this.state = state;
 }
 @Override
 public String toString() {
-	return "Address [collegecity=" + collegecity + ", collegestate=" + collegestate + "]";
+	return "Address [city=" + city + ", state=" + state + "]";
 }
-public Address() {
-	super();
-	// TODO Auto-generated constructor stub
-}
+
 
 }

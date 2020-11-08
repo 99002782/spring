@@ -27,13 +27,13 @@ College addCollege(@RequestBody College college) {
 List<College> getAllColleges(){
 	return collegeService.getAllColleges();
 }
-@DeleteMapping("/colleges/delete-one/{collegecode}")
-boolean deleteCollege(@PathVariable("collegecode")Integer collegeCode) throws CollegeNotFoundException{
-	return collegeService.deleteCollegeByCode(collegeCode);
+@DeleteMapping("/colleges/delete-one/{code}")
+boolean deleteCollege(@PathVariable("code")Integer code) throws CollegeNotFoundException{
+	return collegeService.deleteCollegeByCode(code);
 }
-//@GetMapping("/colleges/get-one/{collegecode}")
-//List<College> getCollegeByState(@PathVariable("collegeState")String collegeState) throws CollegeNotFoundException{
-//	return collegeService.getCollegeByState(collegeState);
+//@GetMapping("/colleges/get-one/{state}")
+//List<College> getCollegeByState(@PathVariable("state")String state) throws CollegeNotFoundException{
+//	return collegeService.getCollegeBystate(state);
 //}
 //@GetMapping("/colleges/page/{page}")
 //List<College> getCollegeByCity(@PathVariable("page")String page)throws CollegeNotFoundException{

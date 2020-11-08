@@ -4,12 +4,12 @@ import java.util.List;
 import com.college.exception.CollegeNotFoundException;
 import com.college.model.College;
 public interface CollegeService {
-	College getCollegeByCode(Integer collegecode) throws CollegeNotFoundException;
+	College getCollegeByCode(Integer code) throws CollegeNotFoundException;
     College addCollege(College college);
-    Boolean deleteCollegeByCode(Integer collegecode) throws CollegeNotFoundException;
+    Boolean deleteCollegeByCode(Integer code) throws CollegeNotFoundException;
     List<College> getAllColleges();
  
-    List<College> getCollegeBycity(String collegecity) throws CollegeNotFoundException;
-    List<College> getCollegeBystate(String collegestate) throws CollegeNotFoundException;
+    //List<College> getCollegeBycity(String city) throws CollegeNotFoundException;
+    //List<College> getCollegeBystate(String state) throws CollegeNotFoundException;
 	//College getAllStudents(Integer collegecode);
 }
