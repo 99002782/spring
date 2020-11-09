@@ -1,16 +1,30 @@
 package com.college.model;
 
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.TypeAlias;
 import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="college")
-@TypeAlias("College")
+@TypeAlias("college")
 public class College {
-	@Id
-	String name;
-    Integer totalstu;
+    @Id
     Integer code;
+    String name;
+    Integer totalstu;
     Address address;
+	public College(Integer code, String name, Integer totalstu, Address address) {
+		super();
+		this.code = code;
+		this.name = name;
+		this.totalstu = totalstu;
+		this.address = address;
+	}
+	public Integer getCode() {
+		return code;
+	}
+	public void setCode(Integer code) {
+		this.code = code;
+	}
 	public String getName() {
 		return name;
 	}
@@ -23,35 +37,17 @@ public class College {
 	public void setTotalstu(Integer totalstu) {
 		this.totalstu = totalstu;
 	}
-	public Integer getCode() {
-		return code;
-	}
-	public void setCode(Integer code) {
-		this.code = code;
-	}
 	public Address getAddress() {
 		return address;
 	}
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	public College(String name, Integer totalstu, Integer code, Address address) {
-		super();
-		this.name = name;
-		this.totalstu = totalstu;
-		this.code = code;
-		this.address = address;
-	}
 	@Override
 	public String toString() {
-		return "College [name=" + name + ", totalstu=" + totalstu + ", code=" + code + ", address=" + address + "]";
-	}
-	public College() {
-		super();
-		// TODO Auto-generated constructor stub
+		return "College [code=" + code + ", name=" + name + ", totalstu=" + totalstu + ", address=" + address + "]";
 	}
     
-	
 	
 	
 }

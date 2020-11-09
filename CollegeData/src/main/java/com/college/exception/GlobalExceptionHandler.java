@@ -74,7 +74,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	{
 	String message=ex.getMessage();
 	LocalDateTime timestamp=LocalDateTime.now();
-	List<String> details=Arrays.asList("Student is not available");
+	List<String> details=Arrays.asList("college is not available");
 	ApiErrors errorrs=new ApiErrors();
 	return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorrs);
 	}
@@ -83,7 +83,7 @@ protected ResponseEntity<Object> handleOtherException(Exception ex)
 {
 String message=ex.getMessage();
 LocalDateTime timestamp=LocalDateTime.now();
-List<String> details=Arrays.asList("Student is not available");
+List<String> details=Arrays.asList("college is not available");
 ApiErrors errorrs=new ApiErrors();
 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorrs);
 }

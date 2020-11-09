@@ -6,10 +6,10 @@ import com.college.model.College;
 public interface CollegeService {
 	College getCollegeByCode(Integer code) throws CollegeNotFoundException;
     College addCollege(College college);
-    Boolean deleteCollegeByCode(Integer code) throws CollegeNotFoundException;
-    List<College> getAllColleges();
+    Boolean deleteCollege(Integer code) throws CollegeNotFoundException;
+    List<College> getAllColleges() throws CollegeNotFoundException;
  
-    //List<College> getCollegeBycity(String city) throws CollegeNotFoundException;
-    //List<College> getCollegeBystate(String state) throws CollegeNotFoundException;
-	//College getAllStudents(Integer collegecode);
+    List<College> getCollegeByName(String name) throws CollegeNotFoundException;
+    //List<College> getCollegeByState(String state) throws CollegeNotFoundException;
+	//College getToatalStu(Integer code);
 }

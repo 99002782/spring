@@ -29,15 +29,17 @@ List<College> getAllColleges(){
 }
 @DeleteMapping("/colleges/delete-one/{code}")
 boolean deleteCollege(@PathVariable("code")Integer code) throws CollegeNotFoundException{
-	return collegeService.deleteCollegeByCode(code);
+	return collegeService.deleteCollege(code);
+}
+
 }
 //@GetMapping("/colleges/get-one/{state}")
 //List<College> getCollegeByState(@PathVariable("state")String state) throws CollegeNotFoundException{
-//	return collegeService.getCollegeBystate(state);
+//	return collegeService.getCollegeByState(state);
 //}
 //@GetMapping("/colleges/page/{page}")
-//List<College> getCollegeByCity(@PathVariable("page")String page)throws CollegeNotFoundException{
+//List<College> getCollegeByName(@PathVariable("page")String page)throws CollegeNotFoundException{
 //	return collegeService.getCollegeByName(page);
-//}
-}
+
+
 

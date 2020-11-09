@@ -15,11 +15,6 @@ public String getState() {
 public void setState(String state) {
 	this.state = state;
 }
-public Address(String city, String state) {
-	super();
-	this.city = city;
-	this.state = state;
-}
 @Override
 public String toString() {
 	return "Address [city=" + city + ", state=" + state + "]";
